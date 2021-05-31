@@ -11,9 +11,7 @@ public class main {
     public static void main(String[] args) {
         File file = new File("country.csv");
         try {
-            if (!file.exists()) {
-                file.createNewFile();
-            }
+            if (!file.exists()) file.createNewFile();
         } catch (IOException e) {
             System.out.println("file đã tồn tại");
         }
@@ -75,6 +73,7 @@ public class main {
                 e.printStackTrace();
             }
         }
+        System.out.println(file.getAbsolutePath());
     }
 
     public static List<String> parseCsvLine(String csvLine) {
